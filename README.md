@@ -1,6 +1,7 @@
 # Step by Step of How to Install Oracle Database 12c on Ubuntu
 ## 1. Oracle Installation Prerequisites
 Host file modification
+
 The **/etc/hosts** file must contain a fully qualified name for the server
 `IP-address fully-qualified-machine-name machine-name`
 
