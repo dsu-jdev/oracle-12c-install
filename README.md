@@ -179,17 +179,17 @@ $ ./runInstaller -ignoreSysPrereqs
 
 42. To start listener:
 ```
-$export ORACLE_BASE=/u01/app/oracle
-$export ORACLE_HOME=/u01/app/oracle/product/12.1.0/dbhome_1
-$export ORACLE_OWNR=oracle
-$export PATH=$PATH:$ORACLE_HOME/bin
-$export ORACLE_SID=orcl
-$$ORACLE_HOME/bin/lsnrctl start
+$ export ORACLE_BASE=/u01/app/oracle
+$ export ORACLE_HOME=/u01/app/oracle/product/12.1.0/dbhome_1
+$ export ORACLE_OWNR=oracle
+$ export PATH=$PATH:$ORACLE_HOME/bin
+$ export ORACLE_SID=orcl
+$ $ORACLE_HOME/bin/lsnrctl start
 ```
 
 43. To start database:
 ```
-$sqlplus /nolog
+$ sqlplus /nolog
 SQL> connect sys as sysdba
 SQL> STARTUP;
 SQL> EXIT;
@@ -205,3 +205,10 @@ SQL> EXIT;
 
 45. To stop listener:
 `$ $ORACLE_HOME/bin/lsnrctl stop`
+
+46. To create USER:
+```
+$ sqlplus /nolog
+SQL> connect sys as sysdba
+SQL> alter session set "_ORACLE_SCRIPT"=true;
+```
